@@ -1,0 +1,55 @@
+# General
+*.log
+*.pot
+*.pyc
+*.pyo
+*.swp
+*.swo
+*.swn
+*.bak
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Virtual Environment
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.sqlite3
+
+# Django
+db.sqlite3
+media/
+staticfiles/
+*.env
+.env.local
+.env.development
+.env.production
+config/settings/local.py
+config/settings/secrets.py
+
+# Migrations (optional)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# React
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+*.lock
+package-lock.json
+yarn.lock
+*.cache
+build/
+dist/
+coverage/
+*.env.local
+*.env.development
+*.env.production
+
+# IDE and Editor Settings
+.vscode/
+.idea/
+*.iml
