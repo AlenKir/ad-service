@@ -1,33 +1,36 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import {useEffect, useState} from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [ads, setAds] = useState([]);
+
+    useEffect(() => {
+        fetchAds();
+    }, []);
+
+    const fetchAds = async () => {
+        try {
+            const response = await fetch("http://127.0.0.1:8000/api/ads/");
+            const data = await response.json();
+            setAds(data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+        <h1>Advertisement Board</h1>
+        <div>
+            {ads.map((ad) => (
+                <p key={ad.id}>
+                    <strong>Title:</strong> {ad.title} <br />
+                    <strong>Description:</strong> {ad.descr} <br />
+                    <strong>Price:</strong> {ad.price} <br />
+                    <strong>Posted:</strong> {ad.created_at}
+                </p>
+            ))}
+        </div>
     </>
   )
 }
