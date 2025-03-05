@@ -21,7 +21,7 @@ function App() {
 
     return (
         <>
-            <AdList title="Advertisements" adList={adList} />
+            <AdList title="Advertisement board" adList={adList} />
         </>
     );
 }
