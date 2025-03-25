@@ -1,10 +1,15 @@
-import styles from './Ad.module.css';
+import { Link } from "react-router-dom";
+import styles from "./Ad.module.css";
 
 const Ad = ({ ad }) => {
+    console.log(ad);
+
     return (
-        <div className={styles.adCard}>
+        <Link to={`/ads/${ad.id}`} className={styles.adCard}>
             <div className={styles.adCard__header}>
-                <h2>{ad.title} - {ad.price}€</h2>
+                <h2>
+                    {ad.title} - {ad.price}€
+                </h2>
             </div>
             <div className={styles.adCard__body}>
                 <p>{ad.descr}</p>
@@ -12,7 +17,7 @@ const Ad = ({ ad }) => {
             <div className={styles.adCard__footer}>
                 <small>{ad.created_at}</small>
             </div>
-        </div>
+        </Link>
     );
 };
 

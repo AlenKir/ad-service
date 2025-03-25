@@ -1,28 +1,15 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import AdList from "./components/AdList.jsx";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import AdList from "./components/AdList";
+import AdDetail from "./components/AdDetail";
 
 function App() {
-    const [adList, setAdList] = useState([]);
-
-    useEffect(() => {
-        fetchAdList();
-    }, []);
-
-    const fetchAdList = async () => {
-        try {
-            const response = await fetch("http://127.0.0.1:8000/api/ads/");
-            const data = await response.json();
-            setAdList(data);
-        } catch (err) {
-            console.error(err);
-        }
-    };
-
     return (
-        <>
-            <AdList title="Advertisement board" adList={adList} />
-        </>
+        <Router>
+            <Routes>
+                <Route path="/" element={<AdList title="Advertisement Board" />} />
+                <Route path="/ads/:id" element={<AdDetail />} />
+            </Routes>
+        </Router>
     );
 }
 
