@@ -3,6 +3,7 @@
     color: #0f0f0f;
     border-radius: 8px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
 }
 
 .adList h1 {
@@ -15,7 +16,5 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 16px;
     padding: 16px;
-    background-color: whitesmoke;
     border-radius: 8px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
