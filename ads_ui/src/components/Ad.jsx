@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import styles from "./Ad.module.css";
 
 const Ad = ({ ad }) => {
-    console.log(ad);
-
     return (
         <Link to={`/ads/${ad.id}`} className={styles.adCard}>
             <div className={styles.adCard__header}>
