@@ -1,0 +1,15 @@
+.adFilter__input,
+.adFilter__select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin: 6px 6px 6px 26px;
+    background-color: white;
+}
+
+.adFilter__input:focus,
+.adFilter__select:focus {
+    border-color: black;
+    outline: none;
+}
