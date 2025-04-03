@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AdService from "../API/AdService.js";
+import AdService from "../../API/AdService.js";
 import styles from "./CreateAd.module.css";
 
 const CreateAd = () => {

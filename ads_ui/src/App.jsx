@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AdList from "./components/AdList";
-import AdDetail from "./components/AdDetail";
-import CreateAd from "./components/CreateAd";
+import AdList from "./components/AdList/AdList.jsx";
+import AdDetail from "./components/AdDetail/AdDetail.jsx";
+import CreateAd from "./components/CreateAd/CreateAd.jsx";
 
 function App() {
     return (
