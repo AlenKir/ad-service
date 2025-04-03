@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { useFetching } from "../hooks/useFetching.jsx";
-import AdService from "../API/AdService.js";
+import { useFetching } from "../../hooks/useFetching.jsx";
+import AdService from "../../API/AdService.js";
 
 const AdDetail = () => {
     const { id } = useParams();

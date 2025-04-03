@@ -1,8 +1,8 @@
 import styles from "./AdList.module.css";
-import Ad from "./Ad.jsx";
+import Ad from "../Ad/Ad.jsx";
 import {useEffect, useState} from "react";
-import {useFetching} from "../hooks/useFetching.jsx";
-import AdService from "../API/AdService.js";
+import {useFetching} from "../../hooks/useFetching.jsx";
+import AdService from "../../API/AdService.js";
 import {useNavigate} from "react-router-dom";
 
 const AdList = ({ title }) => {
