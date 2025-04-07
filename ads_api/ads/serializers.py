@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Ad
+from .models import Ad, Photo
 
 
 class AdSerializer(serializers.ModelSerializer):
@@ -11,7 +11,23 @@ class AdSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
+class PhotoSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Photo
+        fields = ['ad', 'image']
+
+
 class AdCreateSerializer(serializers.ModelSerializer):
+    photos = PhotoSerializer(many=True, read_only=True)
+
     class Meta:
         model = Ad
-        fields = ['title', 'descr', 'body', 'price']
+        fields = ['title', 'descr', 'body', 'price', 'photos']
+
+    def create(self, validated_data):
+        request = self.context.get('request')
+        photos = request.FILES.getlist('photos')
+        ad = Ad.objects.create(**validated_data)
+        for photo in photos:
+            Photo.objects.create(ad=ad, image=photo)
+        return ad

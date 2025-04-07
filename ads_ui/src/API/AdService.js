@@ -10,13 +10,9 @@ export default class AdService {
         return await axios.get(`${API_URL}/api/ads/${id}/`);
     }
 
-    static async createAd(param) {
+    static async createAd(data) {
         try {
-            const response = await axios.post(`${API_URL}/api/ads/create/`, param, {
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            });
+            const response = await axios.post(`${API_URL}/api/ads/create/`, data, {});
             return response.data;
         } catch (error) {
             throw error;
