@@ -5,6 +5,7 @@
     "fields": {
       "title": "Local Handyman Available!",
       "descr": "Need help with home repairs? No job too small! Call John’s Handyman Services. Offering affordable rates and quick, reliable service. Call today for a free quote!",
+      "body": "John’s Handyman Services operates only under the waxing moon. No questions will be asked, no contracts signed. Services offered include fixing, repairing, and making things disappear—sometimes things you didn’t even know you lost. Call now, but be aware of the strange buzzing noise that sometimes follows you after.",
       "price": "50.00",
       "created_at": "2025-03-15T09:00:00Z",
       "updated_at": "2025-03-15T09:00:00Z"
@@ -16,6 +17,7 @@
     "fields": {
       "title": "Free Yoga Classes Every Saturday",
       "descr": "Join us every Saturday at 10 AM for free yoga classes at the Community Center! All skill levels welcome. Bring a mat and relax with us!",
+      "body": "The mats have been set. The incense burns with a smell you can’t quite name. This Saturday at the Community Center, we will stretch in silence as you listen to the hum of the dark trees outside. All levels are welcome, though some may leave with a shadow they did not bring. Just breathe.",
       "price": "0.00",
       "created_at": "2025-03-15T10:00:00Z",
       "updated_at": "2025-03-15T10:00:00Z"
@@ -27,6 +29,7 @@
     "fields": {
       "title": "Dog Walking Services Available!",
       "descr": "Need someone to walk your dog? Experienced dog walker available in the local area. Flexible hours, reliable service, and a love for dogs! Contact me today to schedule a walk for your furry friend.",
+      "body": "I walk dogs, but sometimes the dogs are not of this world. When the moon is high, they run in circles, barking at the sky. I offer flexibility: you decide if the walk is in the park, the alley, or through the quiet streets where you may hear faint voices. They won’t bite, at least not in the usual sense.",
       "price": "15.00",
       "created_at": "2025-03-15T11:00:00Z",
       "updated_at": "2025-03-15T11:00:00Z"
@@ -38,6 +41,7 @@
     "fields": {
       "title": "Garage Sale This Weekend!",
       "descr": "Huge garage sale at 123 Elm Street this Saturday and Sunday. Furniture, clothes, toys, books, and more. Come early for the best deals!",
+      "body": "This weekend, 123 Elm Street. Come early, for the furniture may whisper to you. The books you touch will sometimes follow you home. Everything must go, but something may come back with you. A fair trade. An odd price. Be careful what you take—sometimes the objects linger, unseen, in the corners of your home.",
       "price": "0.00",
       "created_at": "2025-03-15T12:00:00Z",
       "updated_at": "2025-03-15T12:00:00Z"
@@ -49,6 +53,7 @@
     "fields": {
       "title": "Fresh Produce for Sale",
       "descr": "Locally grown, fresh fruits and vegetables available every Saturday morning at the farmer’s market in the town square. Come support local farmers!",
+      "body": "The vegetables have been harvested at dawn, but there are whispers in the soil—whispers of things buried beneath the roots. Tomatoes glow faintly under the streetlights, and the apples, though bright, may leave a bitter taste in your mouth if you dare eat them after dark. Come to the market, but leave before the sun sets. Support local farmers, but beware the ones you cannot see.",
       "price": "10.00",
       "created_at": "2025-03-15T13:00:00Z",
       "updated_at": "2025-03-15T13:00:00Z"
@@ -60,6 +65,7 @@
     "fields": {
       "title": "Local Band Playing This Friday Night!",
       "descr": "The Bluegrass Kings will be performing live at the town hall this Friday at 7 PM. Tickets are $10, and all proceeds go to support the local youth center.",
+      "body": "The Bluegrass Kings are coming to town. Their music will fill the hall, though you may hear other sounds—voices not of this world, faint laughter that is not yours. Tickets are $10, but what you’ll hear is priceless. The youth center may benefit, but what you’ll take with you… well, some things stay with you longer than you think.",
       "price": "10.00",
       "created_at": "2025-03-15T14:00:00Z",
       "updated_at": "2025-03-15T14:00:00Z"
@@ -71,6 +77,7 @@
     "fields": {
       "title": "Washing Machine for Sale",
       "descr": "Used washing machine in good condition for sale. Only 3 years old. $150 or best offer. Call 555-1234 for more details.",
+      "body": "This washing machine has been well-maintained, but it hums with a sound you can’t place. It is 3 years old, but sometimes it seems older. It’s clean, though you may find something strange in the spin cycle. The price is $150, but the machine may offer you a bargain of its own if you stay long enough to hear it. Call 555-1234, if you dare.",
       "price": "150.00",
       "created_at": "2025-03-15T15:00:00Z",
       "updated_at": "2025-03-15T15:00:00Z"
@@ -82,6 +89,7 @@
     "fields": {
       "title": "Tennis Lessons Available",
       "descr": "Looking to improve your tennis game? Professional coach offering private and group lessons for all ages and skill levels. Call now to book your spot!",
+      "body": "The ball hits the ground with a sound that echoes into eternity. Whether you're just starting or looking to improve your skills, I offer tennis lessons where time bends around each swing. The courts are silent when you aren’t looking, but you can feel eyes on you. Contact me today, but beware the lessons that are taught in silence.",
       "price": "25.00",
       "created_at": "2025-03-15T16:00:00Z",
       "updated_at": "2025-03-15T16:00:00Z"
@@ -93,6 +101,7 @@
     "fields": {
       "title": "Lost Dog – Reward",
       "descr": "Have you seen Bella? Missing dog, brown and white, medium size, last seen near Oak Street. Reward for safe return. Call 555-5678.",
+      "body": "Bella was last seen near Oak Street. She is brown and white, but she may not look the same when you find her. If you do, there will be a reward. You may notice something in her eyes—a brief flicker of something that is not quite her. Call 555-5678, but only after dusk. We’ll be waiting.",
       "price": "0.00",
       "created_at": "2025-03-15T17:00:00Z",
       "updated_at": "2025-03-15T17:00:00Z"
@@ -104,6 +113,7 @@
     "fields": {
       "title": "Need Babysitting Services?",
       "descr": "Experienced babysitter available in the town area. Reliable and responsible. Call Sarah at 555-7890 for rates and availability.",
+      "body": "I offer babysitting services, but the children will ask questions you may not be ready to answer. The shadows in the room may move when you're not looking, and the laughter might come from places that aren't quite inside the house. If you feel a cold breeze and hear whispers, that’s just part of the job. Call Sarah at 555-7890, but don’t mention the eyes in the corner of the room.",
       "price": "10.00",
       "created_at": "2025-03-15T18:00:00Z",
       "updated_at": "2025-03-15T18:00:00Z"
