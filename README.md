@@ -1,6 +1,6 @@
 # 🪧 Advertisement Board
 
-A simple full-stack CRUD advertisement board.
+A simple full-stack CRUD application.
 
 ## Tech Stack
 
