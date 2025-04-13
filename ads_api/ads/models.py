@@ -11,3 +11,9 @@ class Ad(models.Model):
 
     class Meta:
         ordering = ['-updated_at']
+
+
+class Photo(models.Model):
+    ad = models.ForeignKey(Ad, related_name='photos', on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='ads/photos/')
+    created_at = models.DateTimeField(auto_now_add=True)
