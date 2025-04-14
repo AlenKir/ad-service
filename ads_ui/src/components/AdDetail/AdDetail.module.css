@@ -9,11 +9,17 @@
     font-family: system-ui, sans-serif;
 }
 
+.adDetail__header {
+    display: flex;
+    justify-content: space-between;
+}
+
 .adDetail__header h2 {
     font-size: 20px;
     margin: 0 0 12px;
     font-weight: 600;
 }
+
 
 .adDetail__body p {
     font-size: 15px;
@@ -49,4 +55,9 @@
     text-align: center;
     margin-top: 40px;
     font-size: 18px;
+}
+
+.adDetail__deleteBtn {
+    color: #f44336;
+    border-color: #f44336;
 }
