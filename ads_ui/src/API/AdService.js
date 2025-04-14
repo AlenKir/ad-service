@@ -15,7 +15,17 @@ export default class AdService {
             const response = await axios.post(`${API_URL}/api/ads/create/`, data, {});
             return response.data;
         } catch (error) {
-            throw error;
+            console.error(error);
+        }
+    }
+
+    static async deleteAd(id) {
+        try {
+            const response = await axios.delete(`${API_URL}/api/ads/${id}/delete/`);
+            return true;
+        }
+        catch (error) {
+           console.error(error);
         }
     }
 }
