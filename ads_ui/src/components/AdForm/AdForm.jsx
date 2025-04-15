@@ -1,9 +1,9 @@
 import {useEffect, useState} from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import AdService from "../../API/AdService.js";
-import styles from "./CreateAd.module.css";
+import styles from "./AdForm.module.css";
 
-const CreateAd = () => {
+const AdForm = () => {
     const { id } = useParams();
 
     const [title, setTitle] = useState("");
@@ -57,7 +57,7 @@ const CreateAd = () => {
     };
 
     return (
-        <div className={styles.createAd}>
+        <div className={styles.adForm}>
             <h1>{id ? "Edit Advertisement" : "Place a New Advert"}</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -105,4 +105,4 @@ const CreateAd = () => {
     );
 };
 
-export default CreateAd;
+export default AdForm;
