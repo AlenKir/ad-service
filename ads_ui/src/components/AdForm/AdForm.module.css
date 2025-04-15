@@ -1,4 +1,4 @@
-.createAd {
+.adForm {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,8 +8,8 @@
     padding: 20px;
 }
 
-.createAd input,
-.createAd textarea {
+.adForm input,
+.adForm textarea {
     width: 100%;
     padding: 12px;
     margin-bottom: 10px;
@@ -20,8 +20,8 @@
     font-family: inherit;
 }
 
-.createAd input:focus,
-.createAd textarea:focus {
+.adForm input:focus,
+.adForm textarea:focus {
     border-color: black;
     outline: none;
 }

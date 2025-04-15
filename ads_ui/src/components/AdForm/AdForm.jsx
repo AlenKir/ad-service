@@ -1,15 +1,35 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import {useEffect, useState} from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import AdService from "../../API/AdService.js";
-import styles from "./CreateAd.module.css";
+import styles from "./AdForm.module.css";
 
-const CreateAd = () => {
+const AdForm = () => {
+    const { id } = useParams();
+
     const [title, setTitle] = useState("");
     const [descr, setDescr] = useState("");
     const [body, setBody] = useState("");
     const [price, setPrice] = useState("");
     const [images, setImages] = useState([]);
     const navigate = useNavigate();
+
+    useEffect(() => {
+        if (id) {
+            const fetchAd = async () => {
+                try {
+                    const res = await AdService.fetchAdDetails(id);
+                    const ad = res.data;
+                    setTitle(ad.title || "");
+                    setDescr(ad.descr || "");
+                    setBody(ad.body || "");
+                    setPrice(ad.price || "");
+                } catch (err) {
+                    console.error("Failed to load ad", err);
+                }
+            };
+            fetchAd();
+        }
+    }, [id]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -19,10 +39,15 @@ const CreateAd = () => {
         images.forEach(image => formData.append("photos", image));
 
         try {
-            await AdService.createAd(formData);
-            navigate("/");
+            if (id) {
+                await AdService.updateAd(id, formData);
+                navigate(`/ads/${id}`);
+            } else {
+                await AdService.createAd(formData);
+                navigate("/");
+            }
         } catch (error) {
-            console.error("Error creating ad", error);
+            console.error("Error submitting ad", error);
         }
     };
 
@@ -32,8 +57,8 @@ const CreateAd = () => {
     };
 
     return (
-        <div className={styles.createAd}>
-            <h1>Place a new advert:</h1>
+        <div className={styles.adForm}>
+            <h1>{id ? "Edit Advertisement" : "Place a New Advert"}</h1>
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"
@@ -74,10 +99,10 @@ const CreateAd = () => {
                     onChange={handleFileChange}
                     accept="image/*"
                 />
-                <button type="submit">Submit</button>
+                <button type="submit">{id ? "Update Ad" : "Submit"}</button>
             </form>
         </div>
     );
 };
 
-export default CreateAd;
+export default AdForm;

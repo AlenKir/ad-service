@@ -12,6 +12,8 @@
 .adDetail__header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
 }
 
 .adDetail__header h2 {
@@ -60,4 +62,13 @@
 .adDetail__deleteBtn {
     color: #f44336;
     border-color: #f44336;
+}
+
+.adDetail__actions {
+    display: flex;
+    gap: 0.5rem;
+
+    button {
+        width: 75px;
+    }
 }

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AdList from "./components/AdList/AdList.jsx";
 import AdDetail from "./components/AdDetail/AdDetail.jsx";
-import CreateAd from "./components/CreateAd/CreateAd.jsx";
+import AdForm from "./components/AdForm/AdForm.jsx";
 
 function App() {
     return (
@@ -9,7 +9,8 @@ function App() {
             <Routes>
                 <Route path="/" element={<AdList title="Advertisement Board" />} />
                 <Route path="/ads/:id" element={<AdDetail />} />
-                <Route path="/create-ad" element={<CreateAd />} />
+                <Route path="/create-ad" element={<AdForm />} />
+                <Route path="/edit-ad/:id" element={<AdForm />} />
             </Routes>
         </Router>
     );

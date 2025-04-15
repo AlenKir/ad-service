@@ -32,3 +32,18 @@ class AdCreateSerializer(serializers.ModelSerializer):
         for photo in photos:
             Photo.objects.create(ad=ad, image=photo)
         return ad
+
+    def update(self, instance, validated_data):
+        request = self.context.get('request')
+        photos = request.FILES.getlist('photos')
+
+        for attr, value in validated_data.items():
+            setattr(instance, attr, value)
+        instance.save()
+
+        if photos:
+            instance.photos.all().delete()
+            for photo in photos:
+                Photo.objects.create(ad=instance, image=photo)
+
+        return instance

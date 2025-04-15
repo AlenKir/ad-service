@@ -1,4 +1,6 @@
 from rest_framework import generics
+from rest_framework.parsers import MultiPartParser, FormParser
+
 from .models import Ad
 from .serializers import AdSerializer, AdCreateSerializer
 
@@ -21,3 +23,9 @@ class AdCreateView(generics.CreateAPIView):
 class AdDeleteView(generics.DestroyAPIView):
     queryset = Ad.objects.all()
     serializer_class = AdSerializer
+
+
+class AdUpdateView(generics.UpdateAPIView):
+    queryset = Ad.objects.all()
+    serializer_class = AdCreateSerializer
+    parser_classes = [MultiPartParser, FormParser]
