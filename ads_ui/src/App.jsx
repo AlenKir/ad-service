@@ -10,6 +10,7 @@ function App() {
                 <Route path="/" element={<AdList title="Advertisement Board" />} />
                 <Route path="/ads/:id" element={<AdDetail />} />
                 <Route path="/create-ad" element={<CreateAd />} />
+                <Route path="/edit-ad/:id" element={<CreateAd />} />
             </Routes>
         </Router>
     );

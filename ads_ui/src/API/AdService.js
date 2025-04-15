@@ -12,8 +12,15 @@ export default class AdService {
 
     static async createAd(data) {
         try {
-            const response = await axios.post(`${API_URL}/api/ads/create/`, data, {});
-            return response.data;
+            return await axios.post(`${API_URL}/api/ads/create/`, data, {});
+        } catch (error) {
+            console.error(error);
+        }
+    }
+
+    static async updateAd(id, formData) {
+        try {
+            return await axios.put(`${API_URL}/api/ads/${id}/update/`, formData, {});
         } catch (error) {
             console.error(error);
         }
@@ -21,8 +28,7 @@ export default class AdService {
 
     static async deleteAd(id) {
         try {
-            const response = await axios.delete(`${API_URL}/api/ads/${id}/delete/`);
-            return true;
+            return await axios.delete(`${API_URL}/api/ads/${id}/delete/`);
         }
         catch (error) {
            console.error(error);

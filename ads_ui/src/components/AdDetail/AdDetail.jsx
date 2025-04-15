@@ -26,6 +26,10 @@ const AdDetail = () => {
         }
     };
 
+    const handleEdit = () => {
+        navigate(`/edit-ad/${id}`);
+    }
+
     useEffect(() => {
         fetchAd();
     }, [id]);
@@ -36,10 +40,13 @@ const AdDetail = () => {
         <article className={styles.adDetail}>
             <header className={styles.adDetail__header}>
                 <h2>{ad.title} - {ad.price}€</h2>
-                <button className={styles.adDetail__deleteBtn} onClick={handleDelete}>Delete</button>
+                <div className={styles.adDetail__actions}>
+                    <button className={styles.adDetail__editBtn} onClick={handleEdit}>Edit</button>
+                    <button className={styles.adDetail__deleteBtn} onClick={handleDelete}>Delete</button>
+                </div>
             </header>
             <section className={styles.adDetail__body}>
-                <p>{ad.descr}</p>
+            <p>{ad.descr}</p>
                 <p>{ad.body}</p>
             </section>
             <footer className={styles.adDetail__footer}>
