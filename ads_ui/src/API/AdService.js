@@ -2,8 +2,19 @@ import axios from "axios";
 const API_URL = import.meta.env.VITE_API_URL;
 
 export default class AdService {
-    static async fetchAdList() {
-        return await axios.get(`${API_URL}/api/ads/`);
+    static async fetchAdList(page=1, sort, query) {
+        try {
+            return await axios.get(`${API_URL}/api/ads/`,
+                {
+                    params: {
+                        page,
+                        ordering: sort,
+                        search: query
+                    }
+                });
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     static async fetchAdDetails(id) {
@@ -14,7 +25,7 @@ export default class AdService {
         try {
             return await axios.post(`${API_URL}/api/ads/create/`, data, {});
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
     }
 
@@ -22,7 +33,7 @@ export default class AdService {
         try {
             return await axios.put(`${API_URL}/api/ads/${id}/update/`, formData, {});
         } catch (error) {
-            console.error(error);
+            console.log(error);
         }
     }
 
@@ -31,7 +42,7 @@ export default class AdService {
             return await axios.delete(`${API_URL}/api/ads/${id}/delete/`);
         }
         catch (error) {
-           console.error(error);
+           console.log(error);
         }
     }
 }
