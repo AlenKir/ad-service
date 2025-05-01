@@ -28,18 +28,17 @@ const AdList = ({ title }) => {
     return (
         <div className={styles.adList}>
             <h1>{title}</h1>
-            <button onClick={() => navigate("/create-ad")}>
+            <button className={styles.createButton} onClick={() => navigate("/create-ad")}>
                 Place a new advert
             </button>
 
-            <AdFilter filter={filter} setFilter={setFilter}/>
-
             <div className={styles.pagination}>
                 <button disabled={!previous} onClick={() => setPage(page - 1)}>
-                    Previous
+                    {'<'} Previous
                 </button>
+                <AdFilter filter={filter} setFilter={setFilter}/>
                 <button disabled={!next} onClick={() => setPage(page + 1)}>
-                    Next
+                    Next {'>'}
                 </button>
             </div>
 
