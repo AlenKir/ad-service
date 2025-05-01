@@ -20,6 +20,13 @@
     margin: 0;
 }
 
+.adCard a {
+    color: inherit;
+    text-decoration: none;
+    display: block;
+}
+
+
 .adCard__body p {
     font-size: 14px;
 }
