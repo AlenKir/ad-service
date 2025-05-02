@@ -54,7 +54,7 @@ class PhotoModelTest(TestCase):
 
     def test_photo_attachment(self):
         self.assertEqual(self.photo.ad, self.ad)
-        self.assertRegex(self.photo.image.name, r".*test_image.*\.jpg$")
+        self.assertRegex(self.photo.image.name.split("/")[-1], r"test_image.*\.jpg$")
 
     def test_photo_created_at(self):
         self.assertIsNotNone(self.photo.created_at)
