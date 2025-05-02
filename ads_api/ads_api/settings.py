@@ -91,7 +91,7 @@ DATABASES = {
         'PORT': os.getenv('DB_PORT', '5432'),
 
         'TEST': {
-            'NAME': 'ad_service_test',
+            'NAME': 'ad_service_test2',
         },
     }
 }
